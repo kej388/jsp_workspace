@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    width: 724px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 0 auto;
+    width: 700px;
+}
+
+.input-container {
+    display:block;
+    width: 65%;
+    height: 20px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    
+  }
+
+  .input-file{
+      display:block;
+      width: 80%;
+      height: 32px;
+      float: left;
+      text-indent: 10px;
+  }
+
+  .icon {
+    float:left;
+    padding: 10px;
+    background: #dfdfdf;
+    opacity: 0.7;
+    color: white;
+    border: 1px solid #8f8f8f;
+    border-right: none;
+    min-width: 30px ;
+    text-align: center;
+  }
+
+  .btn {
+    background-color: #0080ff;
+    display:block;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+    opacity: 0.9;
+    margin: 30px auto;
+  }
+
+  .alertText {
+      display: none;
+      color: red;
+      width: 65%;
+      margin: 0 auto;
+  }
+
