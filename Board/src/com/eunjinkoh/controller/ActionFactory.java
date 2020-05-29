@@ -10,9 +10,11 @@ import com.eunjinkoh.controll.action.BoardUpdateFormAction;
 import com.eunjinkoh.controll.action.BoardViewAction;
 import com.eunjinkoh.controll.action.BoardWriteAction;
 import com.eunjinkoh.controll.action.BoardWriteFormAction;
+import com.eunjinkoh.controll.action.ReplyCheckFromAction;
 import com.eunjinkoh.controll.action.ReplyCheckPassAction;
 import com.eunjinkoh.controll.action.ReplyCheckPassFormAction;
 import com.eunjinkoh.controll.action.ReplyUpdateAction;
+import com.eunjinkoh.controll.action.ReplyUpdateFormAction;
 import com.eunjinkoh.controll.action.ReplyWriteAction;
 
 public class ActionFactory {
@@ -52,10 +54,14 @@ public class ActionFactory {
 			action = new ReplyWriteAction();
 		} else if(command.equals("reply_update")) {
 			action = new ReplyUpdateAction();
-		} else if(command.equals("reply_check_pass")) {
-			action = new ReplyCheckPassAction();
+		} else if(command.equals("reply_update_form")) {
+			action = new ReplyUpdateFormAction();
+		} else if(command.equals("reply_check_form")) {
+			action= new ReplyCheckFromAction();
 		} else if(command.equals("reply_check_pass_form")) {
 			action = new ReplyCheckPassFormAction();
+		} else if(command.equals("reply_check_pass")) {
+			action = new ReplyCheckPassAction();
 		}
 
 		return action;

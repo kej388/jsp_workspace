@@ -31,8 +31,8 @@ function boardCheck() {
 function open_win(url, name) {
 	window.open(url, name, "width=500, height=230");
 }
-function open_win2(url) {
-	window.open("BoardServlet?command=reply_check_pass_form&pNum="+url, "", "width=600, height=230");
+function open_win2(param) {
+	window.open("BoardServlet?command=reply_check_pass_form&pNum="+param, "replyUpdate", "width=600, height=230");
 }
 
 function passCheck() {
@@ -47,7 +47,7 @@ function replyCheck() {
 		alert("이름를 입력하세요.");
 		return false;
 	}
-	if (document.frm.password.value.length == 0) {
+	if (document.frm.pass.value.length == 0) {
 		alert("비밀번호을 입력하세요.");
 		return false;
 	}

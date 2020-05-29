@@ -22,6 +22,8 @@ public class BoardViewAction implements Action{
 		
 		// 글번호를 받음. 글목록에서 글제목을 클릭했을 때
 		String num = null;
+		
+		
 		if(request.getParameter("num") != null) {
 			num = request.getParameter("num"); // 리턴값 String
 		}

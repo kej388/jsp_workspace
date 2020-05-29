@@ -21,11 +21,8 @@ public class BoardCheckPassAction implements Action{
 		String num = request.getParameter("num");
 		String pass = request.getParameter("pass");
 		
-		
 		BoardDAO bDao = BoardDAO.getInstance();
 		BoardVO bVo = bDao.selectOneBoardByNum(num);
-		
-		
 		
 		System.out.println(num);
 		
@@ -34,10 +31,7 @@ public class BoardCheckPassAction implements Action{
 		} else {
 			url = "/board/boardCheckPass.jsp";
 			request.setAttribute("message", "비밀번호가 틀렸습니다.");
-		}
-		
-		
-		
+		} 
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 	}

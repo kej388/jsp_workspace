@@ -13,7 +13,7 @@
 		<h1>비밀번호 확인</h1>
 		<form action="BoardServlet" name="frm" method="post">
 			<input type="hidden" name="command" value="reply_check_pass">
-			<input type="hidden" name="num" value="${param.pNum}">
+			<input type="hidden" name="no" value="${param.pNum}">
 			<table style="width: 80%">
 				<tr>
 					<th>비밀번호</th>

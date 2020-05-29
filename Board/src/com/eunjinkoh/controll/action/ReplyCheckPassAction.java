@@ -17,17 +17,15 @@ public class ReplyCheckPassAction implements Action{
 			HttpServletResponse response) throws ServletException, IOException {
 		String url = null;
 		
-		String pNum = request.getParameter("num");
-		String pass = request.getParameter("pass");
+		String num = request.getParameter("no");
+		String pass= request.getParameter("pass");
+		BoardDAO bDo = BoardDAO.getInstance();
 		
-//		System.out.println(pNum);
-//		System.out.println(pass);
+		System.out.println(num);
+		System.out.println(pass);
 		
-		BoardDAO bDao = BoardDAO.getInstance();
+		ReplyVVO rVo = bDo.selectOneReplyByNum(num);
 		
-		ReplyVVO rVo = bDao.selectOneReplyByNum(pNum);
-		
-		System.out.println(rVo.getPassword());
 		
 		if(rVo.getPassword().equals(pass)) {
 			url = "/board/replyUpdate.jsp";
@@ -35,11 +33,10 @@ public class ReplyCheckPassAction implements Action{
 		} else {
 			url = "/board/boardCheckPass.jsp";
 			request.setAttribute("message", "비밀번호가 틀렸습니다.");
-		}
+		} 
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
-		
 	}
 
 }

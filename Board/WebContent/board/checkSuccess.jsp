@@ -14,6 +14,9 @@
 			confirm('삭제하시겠습니까? ');
 			
 			window.opener.parent.location.href = "BoardServlet?command=board_delete&num=${param.num}";
+		} else if(window.name == "replyUpdate") {
+			window.opener.parent.location.href = "BoardServlet?command=board_view&num=${param.num}";
+			console.log("${param.no}");
 		}
 		window.close();
 	</script>

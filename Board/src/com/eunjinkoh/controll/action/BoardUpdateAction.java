@@ -26,7 +26,7 @@ public class BoardUpdateAction implements Action{
 		BoardDAO bDao = BoardDAO.getInstance();
 		bDao.updateBoard(bVo);
 		
-		response.sendRedirect("/Board/BoardServlet?command=board_list");
+		response.sendRedirect("/Board/BoardServlet?command=board_view");
 		
 	}
 	

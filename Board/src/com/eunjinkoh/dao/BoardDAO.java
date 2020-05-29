@@ -203,6 +203,7 @@ public class BoardDAO {
 				if(rs.next()) {
 					rVo = new ReplyVVO();
 					
+					rVo.setNo(rs.getInt("no"));
 					rVo.setpNum(rs.getInt("pNum"));
 					rVo.setName(rs.getString("name"));
 					rVo.setPassword(rs.getString("password"));
@@ -363,7 +364,7 @@ public class BoardDAO {
 	
 	// reply 수정 
 	public void updateReply(ReplyVVO rVo) {
-		String sql = "UPDATE reply SET name=?, password=? "
+		String sql = "UPDATE reply SET name=?, password=?, "
 				+ "content=? WHERE no=?";
 		
 		Connection conn = null;
@@ -375,7 +376,7 @@ public class BoardDAO {
 			pstmt.setString(1, rVo.getName());
 			pstmt.setString(2, rVo.getPassword());
 			pstmt.setString(3, rVo.getContent());
-			pstmt.setInt(5, rVo.getNo());
+			pstmt.setInt(4, rVo.getNo());
 			
 			pstmt.executeUpdate();
 		} catch(SQLException e) {

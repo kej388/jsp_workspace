@@ -14,6 +14,7 @@
 		<form action="BoardServlet" name="frm" method="post">
 			<input type="hidden" name="command" value="board_check_pass">
 			<input type="hidden" name="num" value="${param.num}">
+			<input type="hidden" name="pNum" value="${param.pNum}">
 			<table style="width: 80%">
 				<tr>
 					<th>비밀번호</th>
