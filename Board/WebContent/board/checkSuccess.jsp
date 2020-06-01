@@ -15,9 +15,12 @@
 			
 			window.opener.parent.location.href = "BoardServlet?command=board_delete&num=${param.num}";
 		} else if(window.name == "replyUpdate") {
-			window.opener.parent.location.href = "BoardServlet?command=board_view&num=${param.num}";
+			window.opener.parent.location.href = "BoardServlet?command=board_view&num=${param.pnum}";
 			console.log("${param.no}");
+		} else if(window.name == "replyDelete") {
+			window.opener.parent.location.href = "BoardServlet?command=reply_delete&no=${no}&num=${pnum}";
 		}
+		
 		window.close();
 	</script>
 </body>

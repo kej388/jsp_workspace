@@ -365,7 +365,7 @@ public class BoardDAO {
 	// reply 수정 
 	public void updateReply(ReplyVVO rVo) {
 		String sql = "UPDATE reply SET name=?, password=?, "
-				+ "content=? WHERE no=?";
+				+ "content=? WHERE no=? and pNum=?";
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -377,12 +377,29 @@ public class BoardDAO {
 			pstmt.setString(2, rVo.getPassword());
 			pstmt.setString(3, rVo.getContent());
 			pstmt.setInt(4, rVo.getNo());
+			pstmt.setInt(5, rVo.getpNum());
 			
 			pstmt.executeUpdate();
 		} catch(SQLException e) {
 			e.printStackTrace();
 		} finally {
 			DBManager.close(conn, pstmt);
+		}
+	}
+	
+	public void deleteReply(String no) {
+		String sql = "DELETE reply WHERE no=?";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		try {
+			conn = DBManager.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, no);
+			
+			pstmt.executeUpdate();
+		} catch(SQLException e) {
+			e.printStackTrace();
 		}
 	}
 }

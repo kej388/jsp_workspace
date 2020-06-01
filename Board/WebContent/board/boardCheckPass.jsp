@@ -15,6 +15,7 @@
 			<input type="hidden" name="command" value="board_check_pass">
 			<input type="hidden" name="num" value="${param.num}">
 			<input type="hidden" name="pNum" value="${param.pNum}">
+			<input type="hidden" name="no" value="${param.no}">
 			<table style="width: 80%">
 				<tr>
 					<th>비밀번호</th>

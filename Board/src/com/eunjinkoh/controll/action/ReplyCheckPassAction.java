@@ -21,6 +21,7 @@ public class ReplyCheckPassAction implements Action{
 		String pass= request.getParameter("pass");
 		BoardDAO bDo = BoardDAO.getInstance();
 		
+		
 		System.out.println(num);
 		System.out.println(pass);
 		

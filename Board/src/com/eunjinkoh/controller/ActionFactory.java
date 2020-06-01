@@ -13,6 +13,7 @@ import com.eunjinkoh.controll.action.BoardWriteFormAction;
 import com.eunjinkoh.controll.action.ReplyCheckFromAction;
 import com.eunjinkoh.controll.action.ReplyCheckPassAction;
 import com.eunjinkoh.controll.action.ReplyCheckPassFormAction;
+import com.eunjinkoh.controll.action.ReplyDeleteAction;
 import com.eunjinkoh.controll.action.ReplyUpdateAction;
 import com.eunjinkoh.controll.action.ReplyUpdateFormAction;
 import com.eunjinkoh.controll.action.ReplyWriteAction;
@@ -62,6 +63,8 @@ public class ActionFactory {
 			action = new ReplyCheckPassFormAction();
 		} else if(command.equals("reply_check_pass")) {
 			action = new ReplyCheckPassAction();
+		} else if(command.equals("reply_delete")) {
+			action = new ReplyDeleteAction();
 		}
 
 		return action;

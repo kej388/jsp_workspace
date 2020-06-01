@@ -31,9 +31,15 @@ function boardCheck() {
 function open_win(url, name) {
 	window.open(url, name, "width=500, height=230");
 }
+
 function open_win2(param) {
-	window.open("BoardServlet?command=reply_check_pass_form&pNum="+param, "replyUpdate", "width=600, height=230");
+	window.open("BoardServlet?command=reply_check_pass_form&no="+param, "replyUpdate", "width=600, height=230");	
 }
+function open_win3(param) {
+	window.open("BoardServlet?command=board_check_pass_form&no="+param, "replyDelete", "width=600, height=230");
+	console.log(param);
+}
+
 
 function passCheck() {
 	if(document.frm.pass.value.length == 0) {

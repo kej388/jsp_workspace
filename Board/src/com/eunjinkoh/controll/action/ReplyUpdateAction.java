@@ -19,6 +19,7 @@ public class ReplyUpdateAction implements Action{
 		ReplyVVO rVo = new ReplyVVO();
 		
 		rVo.setNo(Integer.parseInt(request.getParameter("num")));
+		rVo.setpNum(Integer.parseInt(request.getParameter("pnum")));
 		rVo.setName(request.getParameter("name"));
 		rVo.setPassword(request.getParameter("pass"));
 		rVo.setContent(request.getParameter("content"));

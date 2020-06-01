@@ -20,13 +20,21 @@ public class BoardCheckPassAction implements Action{
 		
 		String num = request.getParameter("num");
 		String pass = request.getParameter("pass");
+		String no = request.getParameter("no");
+		
+		System.out.println(no);
 		
 		BoardDAO bDao = BoardDAO.getInstance();
 		BoardVO bVo = bDao.selectOneBoardByNum(num);
+		ReplyVVO rVo = bDao.selectOneReplyByNum(no);
 		
 		System.out.println(num);
 		
-		if(bVo.getPass().equals(pass)) {
+		if(rVo.getPassword().equals(pass)) {
+			url = "/board/checkSuccess.jsp";
+			request.setAttribute("no", rVo.getNo());
+			request.setAttribute("pnum", rVo.getpNum());
+		} else if(bVo.getPass().equals(pass)) {
 			url = "/board/checkSuccess.jsp";
 		} else {
 			url = "/board/boardCheckPass.jsp";

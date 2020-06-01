@@ -12,6 +12,7 @@
 	<form name="frm" method="post" action="BoardServlet">
 		<input type="hidden" name="command" value="reply_update">
 		<input type="hidden" name="num" value="${reply.no}">
+		<input type="hidden" name="pnum" value="${reply.pNum}">
 		<table class="list">    			
 			<tr>
 				<th>작성자</th>

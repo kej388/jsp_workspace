@@ -51,8 +51,8 @@
     					<pre>${reply.content}</pre>    					
     				</td> 
     				<td width="20%" style="border:none;">
-    					<input type="button" value="수정" onclick="open_win2('${reply.no}')">
-    					<input type="button" value="삭제" onclick="open_win2('${reply.no}')">
+    					<input type="button" id="re_update" value="수정" onclick="open_win2('${reply.no}')">
+    					<input type="button" id="re_delete" value="삭제" onclick="open_win3('${reply.no}')">
     				</td>   				
     			</tr>
     			<tr>
