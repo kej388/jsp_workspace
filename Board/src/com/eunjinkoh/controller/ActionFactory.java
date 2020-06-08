@@ -59,7 +59,7 @@ public class ActionFactory {
 			action = new ReplyUpdateFormAction();
 		} else if(command.equals("reply_check_form")) {
 			action= new ReplyCheckFromAction();
-		} else if(command.equals("reply_check_pass_form")) {
+		} else if(command.equals("reply_check_pass_form")) {                                     
 			action = new ReplyCheckPassFormAction();
 		} else if(command.equals("reply_check_pass")) {
 			action = new ReplyCheckPassAction();
