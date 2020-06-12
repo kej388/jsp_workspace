@@ -1,22 +1,22 @@
-package com.eunjinkoh.controller;
+package com.saeyan.controller;
 
-import com.eunjinkoh.controll.action.Action;
-import com.eunjinkoh.controll.action.BoardCheckPassAction;
-import com.eunjinkoh.controll.action.BoardCheckPassFormAction;
-import com.eunjinkoh.controll.action.BoardDeleteAction;
-import com.eunjinkoh.controll.action.BoardListAction;
-import com.eunjinkoh.controll.action.BoardUpdateAction;
-import com.eunjinkoh.controll.action.BoardUpdateFormAction;
-import com.eunjinkoh.controll.action.BoardViewAction;
-import com.eunjinkoh.controll.action.BoardWriteAction;
-import com.eunjinkoh.controll.action.BoardWriteFormAction;
-import com.eunjinkoh.controll.action.ReplyCheckFromAction;
-import com.eunjinkoh.controll.action.ReplyCheckPassAction;
-import com.eunjinkoh.controll.action.ReplyCheckPassFormAction;
-import com.eunjinkoh.controll.action.ReplyDeleteAction;
-import com.eunjinkoh.controll.action.ReplyUpdateAction;
-import com.eunjinkoh.controll.action.ReplyUpdateFormAction;
-import com.eunjinkoh.controll.action.ReplyWriteAction;
+import com.saeyan.controll.action.Action;
+import com.saeyan.controll.action.BoardCheckPassAction;
+import com.saeyan.controll.action.BoardCheckPassFormAction;
+import com.saeyan.controll.action.BoardDeleteAction;
+import com.saeyan.controll.action.BoardListAction;
+import com.saeyan.controll.action.BoardUpdateAction;
+import com.saeyan.controll.action.BoardUpdateFormAction;
+import com.saeyan.controll.action.BoardViewAction;
+import com.saeyan.controll.action.BoardWriteAction;
+import com.saeyan.controll.action.BoardWriteFormAction;
+import com.saeyan.controll.action.ReplyCheckFromAction;
+import com.saeyan.controll.action.ReplyCheckPassAction;
+import com.saeyan.controll.action.ReplyCheckPassFormAction;
+import com.saeyan.controll.action.ReplyDeleteAction;
+import com.saeyan.controll.action.ReplyUpdateAction;
+import com.saeyan.controll.action.ReplyUpdateFormAction;
+import com.saeyan.controll.action.ReplyWriteAction;
 
 public class ActionFactory {
 	private static ActionFactory instance = new ActionFactory();

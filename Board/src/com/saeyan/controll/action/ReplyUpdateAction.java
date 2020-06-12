@@ -1,4 +1,4 @@
-package com.eunjinkoh.controll.action;
+package com.saeyan.controll.action;
 
 import java.io.IOException;
 import java.sql.Timestamp;

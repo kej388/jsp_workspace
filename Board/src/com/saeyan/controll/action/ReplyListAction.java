@@ -1,6 +1,7 @@
-package com.eunjinkoh.controll.action;
+package com.saeyan.controll.action;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -9,30 +10,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.eunjinkoh.dao.BoardDAO;
-import com.eunjinkoh.dto.BoardVO;
+import com.eunjinkoh.dto.ReplyVVO;
 
-public class BoardListAction implements Action{
+public class ReplyListAction implements Action{
 
 	@Override
 	public void execute(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		int pageno;
-		if(request.getParameter("pageno")!=null){
-			pageno=Integer.parseInt(request.getParameter("pageno"));
-			System.out.println(pageno);
-		}else{
-			pageno=1;
-		}
+		int pNum = Integer.parseInt(request.getParameter("pNum"));
 		
-		String url = "/board/boardList.jsp";
 		BoardDAO bDao = BoardDAO.getInstance();
-		List<BoardVO> boardList = bDao.selectAllBoards(pageno);
+		List<ReplyVVO> list =  new ArrayList<ReplyVVO>();
+		list = bDao.selectAllReply(pNum);
 		
-		int recordCount=bDao.selectCountBoard();
-		
-		request.setAttribute("boardList", boardList);
-		request.setAttribute("recordCount", recordCount);
-		
+		String url = "/board/boardView.jsp";
+		request.setAttribute("replyList", list);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 	}

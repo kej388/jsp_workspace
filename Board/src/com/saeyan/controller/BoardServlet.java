@@ -1,4 +1,4 @@
-package com.eunjinkoh.controller;
+package com.saeyan.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.eunjinkoh.controll.action.Action;
+import com.saeyan.controll.action.Action;
 
 /**
  * Servlet implementation class BoardServlet
